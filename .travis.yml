@@ -18,7 +18,7 @@ script:
   - if test -z "$PRE" ; then PRE=/opt/local ; fi
   - if test "$MACPORTS_CI_EXEC" = yes ; then
       chmod +x ./macports-ci ;
-      ./macports-ci install --prefix="$PRE" $OPT ;
+      ./macports-ci install --prefix=/opt/local $OPT ;
       export COLUMNS=80 ;
       export PATH="/opt/local/bin:/opt/local/sbin:$PATH" ;
     else
