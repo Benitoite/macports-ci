@@ -99,7 +99,7 @@ if test "$SOURCE" = yes ; then
   tar xjf MacPorts-${MACPORTS_VERSION}.tar.bz2
   cd MacPorts-${MACPORTS_VERSION}
 # install
-  ./configure --prefix="$MACPORTS_PREFIX" --with-applications-dir="$MACPORTS_PREFIX/Applications" >/dev/null &&
+  ./configure --prefix=$MACPORTS_PREFIX --with-applications-dir=$MACPORTS_PREFIX/Applications >/dev/null &&
     sudo make install >/dev/null
 else
 # download installer:
