@@ -84,9 +84,9 @@ else
   exit 1
 fi
 
-echo "macports-ci: OSX version $OSX_VERSION $OSX_NAME"
+echo "macports-ci: OSX version $OSX_VERSION $OSX_NAME detected although this script will use yosemite."
 
-MACPORTS_PKG=MacPorts-${MACPORTS_VERSION}-${OSX_VERSION}-${OSX_NAME}.pkg
+MACPORTS_PKG=MacPorts-${MACPORTS_VERSION}-10.10-Yosemite.pkg
 
 URL="https://distfiles.macports.org/MacPorts"
 URL="https://github.com/macports/macports-base/releases/download/v$MACPORTS_VERSION/"
