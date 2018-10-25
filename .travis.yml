@@ -28,7 +28,7 @@ script:
   - port installed
   - if test "$PRE" = /opt/local ; then source macports-ci ccache ; fi
 # install a small port for test:
-  - sudo port -N install xdrfile
+  - sudo /opt/local/port -N install xdrfile
   - sudo port -N uninstall xdrfile
   - source macports-ci localports test_portfiles
 # install a small local port for test:
