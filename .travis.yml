@@ -15,12 +15,12 @@ matrix:
   
 script:
 # this is required for curl to work correctly:
-  - if !(test -z "$PRE") ; then PRE=/opt/local ; fi
+  - if test -z "$PRE" ; then PRE=/opt/local ; fi
   - if test "$MACPORTS_CI_EXEC" = yes ; then
       chmod +x ./macports-ci ;
       ./macports-ci install --prefix="$PRE" $OPT ;
       export COLUMNS=80 ;
-      PATH="$PRE/bin:$PATH" ;
+      PATH="/opt/local/bin:$PATH" ;
     else
       source macports-ci install --prefix="$PRE" $OPT ;
     fi
