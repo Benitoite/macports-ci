@@ -20,7 +20,7 @@ script:
       chmod +x ./macports-ci ;
       ./macports-ci install --prefix="$PRE" $OPT ;
       export COLUMNS=80 ;
-      PATH="/opt/local/bin:/opt/local/sbin:$PATH" ;
+      export PATH="/opt/local/bin:/opt/local/sbin:$PATH" ;
     else
       source macports-ci install --prefix="$PRE" $OPT ;
     fi
